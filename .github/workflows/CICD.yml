@@ -7,9 +7,9 @@ jobs:
       - name: Connexion SSH avec le serveur
         uses: appleboy/ssh-action@master
         with:
-          host: "ssh-${{ secrets.mawanzi }}.alwaysdata.net"
-          username: ${{ secrets.mawanzi }}
-          password: ${{ secrets.RoMuAlD95140! }}
+          host: "ssh-${{ mawanzi.USERNAME }}.alwaysdata.net"
+          username: ${{ mawanzi.USERNAME }}
+          password: ${{ RoMuAlD95140!.PASSWORD }}
           script: |
             cd $HOME/www/
   Copy:
@@ -19,9 +19,9 @@ jobs:
       - name: Connexion SSH avec le serveur
         uses: appleboy/ssh-action@master
         with:
-          host: "ssh-${{ secrets.mawanzi }}.alwaysdata.net"
-          username: ${{ secrets.mawanzi }}
-          password: ${{ secrets.RoMuAlD95140! }}
+          host: "ssh-${{ mawanzi.USERNAME }}.alwaysdata.net"
+          username: ${{ mawanzi.USERNAME }}
+          password: ${{ RoMuAlD95140!.PASSWORD }}
           script: |
             last_directory=$(basename ${{ runner.workspace }})
             cd $HOME/
